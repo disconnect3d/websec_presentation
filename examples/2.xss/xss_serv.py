@@ -1,7 +1,7 @@
 from __future__ import print_function
 
 import sqlite3
-from flask import Flask, request, render_template
+from flask import Flask, request, make_response, render_template
 from wtforms import Form, BooleanField, TextField, PasswordField, validators
 
 
@@ -29,7 +29,10 @@ def index():
     cur.execute("SELECT msg FROM comments")
     comments = [i[0] for i in cur.fetchall()]
     con.close()
-    return render_template('comments.html', form=form, comments=comments)
+
+    resp = make_response(render_template('comments.html', form=form, comments=comments))
+    resp.set_cookie('Authorization', value='tajne_haslo')
+    return resp
 
 
 @app.route('/image')

@@ -1,0 +1,2 @@
+/image?src=cat.img"><script>alert("XSS")</script>
+
