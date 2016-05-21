@@ -1,0 +1,1 @@
+sqlmap --url=http://127.0.0.1:5000/ --threads 5 --tables --dbms SQLite --forms --level=3 --risk=3 --technique=B
